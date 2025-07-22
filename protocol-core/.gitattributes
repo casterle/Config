@@ -1,0 +1,19 @@
+# ========================================================
+# Design Rationale: Line Ending Normalization
+#
+# This repository enforces LF line endings for all markdown
+# and plaintext files to ensure cross-platform consistency.
+# Developers on Windows, macOS, and Linux may use different
+# editors and Git configurations — without this rule, diffs
+# and file parsing may behave unpredictably.
+#
+# Benefits:
+# - Prevents noisy Git diffs caused by CRLF/CR variations
+# - Ensures markdown formatting renders consistently
+# - Aligns with Unix-style tooling and automation
+# ========================================================
+
+# Normalize line endings across platforms
+*.md           text eol=lf
+*.txt          text eol=lf
+*.prompt.md    text eol=lf
